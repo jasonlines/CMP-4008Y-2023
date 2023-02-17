@@ -38,14 +38,14 @@ public class Film extends MediaItem{
         // Example of polymorphism - remember, inheritance is an IS-A relationship. Every class implicitly
         // extends Object (hence all classes you make will already have a toString method). This means that if
         // we have a reference of type Object, then we can store any class in it (since everything is a subclass
-        // of object
+        // of object)
         Object anObject = testFilm;
-        Object anotherObject = "hello"; // even this works, because String IS-A object since it is a class
+        Object anotherObject = "hello"; // even this works, because String IS-An object since it is a class
 
         // The static type of "anObject" is Object, but when the code runs, Java knows that it is storing
-        // a Film object. So the static type (as declared on line 44) is object, but the dynamic type is Film.
+        // a Film object. So the static type (as declared on line 44) is Object, but the dynamic type is Film.
         // This is very useful, as it means we can have references to super classes, but the reference can store
-        // an object that is the type of the subclass. For example, in the lecture we made the MediaItem class
+        // a subclass object within it. For example, in the lecture we made the MediaItem class
         // and made Film extend MediaItem - this means that I can make a variable to store a MediaItem, which we
         // will call myMedia, but inside this variable I can store a Film (becuase film extends MediaItem, and
         // therefore a Film object IS-A MediaItem object too)
@@ -100,6 +100,9 @@ public class Film extends MediaItem{
             // of the element at position i is either a Film or TvSeries object.
         }
 
+        // printing the array again but using a for-each loop this time. It will do the same as the for loop above,
+        // but it is a clear example that we are getting an object with the static type of MediaItem at each iteration,
+        // but when the code actually runs, the dynamic type determines what is printed)
         for(MediaItem mediaItem: watchedThisWeek){
             System.out.println(mediaItem);
         }
