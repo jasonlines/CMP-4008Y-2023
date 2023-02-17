@@ -1,5 +1,3 @@
-import javax.print.attribute.standard.Media;
-
 public class Film extends MediaItem{
 
     // fields
